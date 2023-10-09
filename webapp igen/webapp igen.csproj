@@ -11,4 +11,8 @@
     <Compile Remove="Pages\locations.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\map.js" />
+  </ItemGroup>
+
 </Project>

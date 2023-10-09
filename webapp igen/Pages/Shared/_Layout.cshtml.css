@@ -8,13 +8,13 @@ a.navbar-brand {
 }
 
 a {
-  color: #0077cc;
+  color: lightgrey;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #1b6ec2; 
+    background-color: #1b6ec2;
+    border-color: #1b6ec2;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -24,7 +24,7 @@ a {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
