@@ -17,7 +17,7 @@ fetch("Data/sitecluster.json")
             var site = filtredSites[i]; 
 
             var myIcon = L.icon({ 
-                iconUrl: 'imgs/AA-marker-icon.png',
+                iconUrl: 'imgs/MarkerIcon.png',
                 iconSize: [18, 18],
                 shadowSize: [41, 41],
                 iconAnchor: [12, 41],
@@ -29,3 +29,29 @@ fetch("Data/sitecluster.json")
 
         map.addLayer(markers); // Add the markers layer to the map
     });
+
+function myIcon('imgs/MarkerIcon.png') {
+        var infobox = document.getElementById("myInfobox");
+        infobox.classList.toggle("show");
+}
+
+function myIcon .search() {
+    while (Write = 'Data/sitecluster.json') {
+        var keyboardEvent = document.createEvent('KeyboardEvent'); 
+        var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? 'initKeyboardEvent' : 'initKeyEvent'; 
+        keyboardEvent[initMethod]('keydown', // event type : keydown, keyup, keypress
+             true, // bubbles
+             true, // cancelable
+             window, // viewArg: should be window
+             false, // ctrlKeyArg
+             false, // altKeyArg
+             false, // shiftKeyArg
+             false, // metaKeyArg
+             13, // keyCodeArg : unsigned long the virtual key code, else 0
+             13 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+        );
+        document.getElementById('text').dispatchEvent(keyboardEvent);
+        var infobox = document.getElementById("myInfobox");
+        infobox.classList.toggle("show");
+    }
+}
