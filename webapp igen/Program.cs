@@ -1,9 +1,21 @@
+using System;
+using webapp_igen.Data.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<MapContext>();
 
 var app = builder.Build();
+
+var test = app.Services.CreateScope();
+var fail = test.ServiceProvider.GetRequiredService<MapContext>();
+fail.Database.EnsureCreated();
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
