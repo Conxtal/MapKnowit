@@ -6,11 +6,14 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" />
+<link rel="stylesheet" href="~/css/leaflet.css"/>
 
-    
+<link rel="stylesheet" href="~/css/MarkerCluster.min.css" />
+<link rel="stylesheet" href="~/css/MarkerCluster.Default.min.css" />
+
+
+
+
 
 
 <div class="center">
@@ -45,19 +48,12 @@
 
 
 
-<div id="map" style="height: 900px;"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
-<script src="js/map.js"></script>
 
-<div class="infobox" onclick="myIcon(iconUrl = 'imgs/MarkerIcon.png')" KeyboardEvent="enter1">
+
+<div class="infobox" @* onclick="myIcon(iconUrl = 'imgs/MarkerIcon.jpg')" *@ KeyboardEvent="enter1">
     <div class="infoboxwindow">
         <div class="infoboxBackground">
-            <div id="infoboxImage">
-                <img src="~/imgs/pexels-johannes-plenio-1423600.jpg" />
-
-            </div>
         </div>
     </div>
 
@@ -66,9 +62,14 @@
 
 </div>
 
+<div id="map" style="height: 1000px;">
+   
+</div>
 
+<script src="~/js/leaflet.js"></script>
+<script src="~/js/leaflet.markercluster.js"></script>
 
-
+<script src="js/map.js"></script>
 
 <style>
 
@@ -126,7 +127,7 @@
 }
 
     .panel-container.visible {
-        left: 0;
+        opacity: 1;
     }
 
 .panel-header {
@@ -154,7 +155,7 @@
     right: 8%;
     top: 10px;
     width: 1500px;
-    z-index: 1
+    z-index: 1;
 }
 
 .infoboxBackground{
@@ -169,40 +170,7 @@
     background-color: #f5f5f5;
 }
 
-#infoboxImage {
-    position: absolute;
-    height: 200px;
-    width: 100%;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-color: #f5f5f5;
-}
 
-#infoboxImage img{
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: 100%;
-    height: auto;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-
-
-
-    
-
-   
-
-
-
-
-
-   
 </style>
 
 

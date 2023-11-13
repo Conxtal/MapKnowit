@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -9,12 +9,6 @@
 
   <ItemGroup>
     <Compile Remove="Pages\locations.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Data\Context\MapContext.cs" />
-    <Content Include="Data\Model\Company.cs" />
-    <Content Include="Data\Model\Division.cs" />
   </ItemGroup>
 
   <ItemGroup>

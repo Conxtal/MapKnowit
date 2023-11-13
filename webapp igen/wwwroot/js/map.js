@@ -27,7 +27,7 @@ fetch("Data/sitecluster.json")
 
 
             var myIcon = L.icon({
-                iconUrl: 'imgs/Marker.png',
+                iconUrl: 'imgs/MarkerIcon.jpg',
                 iconSize: [18, 18],
                 shadowSize: [41, 41],
                 iconAnchor: [12, 41],
