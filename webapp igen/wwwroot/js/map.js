@@ -1,4 +1,4 @@
-fetch("Data/sitecluster.json")
+fetch("../sitecluster.json")
     .then(response => response.json())
     .then(data => {
         var map = L.map('map').setView([59.3789291381836, 16.4947643280029], 7);

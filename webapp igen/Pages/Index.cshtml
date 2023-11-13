@@ -54,12 +54,19 @@
 <div class="infobox" @* onclick="myIcon(iconUrl = 'imgs/MarkerIcon.jpg')" *@ KeyboardEvent="enter1">
     <div class="infoboxwindow">
         <div class="infoboxBackground">
+            <div id="infoboxImage">
+                <img src="~/imgs/pexels-johannes-plenio-1423600.jpg" />
+                <div id="pricePoint">
+                    <p id="textPrice">£ 128</p>
+                </div>
+            </div>
+            <div class="infoboxInformation">
+                <div id="Information">
+                    <p id="nameofPlace"> Salty Springs</p>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-
 </div>
 
 <div id="map" style="height: 1000px;">
@@ -170,7 +177,63 @@
     background-color: #f5f5f5;
 }
 
+#infoboxImage img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
+#pricePoint{
+    position: absolute;
+    height: 35px;
+    width: 100px;
+    bottom: -50px;
+    right: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+}
+
+#textPrice{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font: 800;
+    position: absolute;
+    left: 29px;
+    top: 2px;
+}
+
+#Information{
+        font-family: Arial;
+}
+
+#Information #nameofPlace {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 35%;
+    left: 30px;
+}
+
+
+
+
+
+
+    
+
+   
+
+
+
+
+
+   
 </style>
 
 
