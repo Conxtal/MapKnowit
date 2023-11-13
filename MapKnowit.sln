@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webapp", "Webapp\Webapp.csproj", "{F593221D-ACF9-4028-9229-127DBF2E49EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapp igen", "webapp igen\webapp igen.csproj", "{8FF25191-AC37-4AE9-AD63-E2B42CDD8DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapIt", "webapp igen\MapIt.csproj", "{8FF25191-AC37-4AE9-AD63-E2B42CDD8DCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F593221D-ACF9-4028-9229-127DBF2E49EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F593221D-ACF9-4028-9229-127DBF2E49EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F593221D-ACF9-4028-9229-127DBF2E49EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F593221D-ACF9-4028-9229-127DBF2E49EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FF25191-AC37-4AE9-AD63-E2B42CDD8DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FF25191-AC37-4AE9-AD63-E2B42CDD8DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF25191-AC37-4AE9-AD63-E2B42CDD8DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
