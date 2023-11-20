@@ -31,41 +31,14 @@ fetch("../sitecluster.json")
                 iconSize: [18, 18],
                 shadowSize: [41, 41],
                 iconAnchor: [12, 41],
-                popupAnchor: [0, -41]
+                popupAnchor: [0, -41],
+                button: onclick = console.log,
+
             });
-            var marker = L.marker([site.lat, site.lon], { icon: myIcon }).addTo(map);
+            var marker = L.marker([site.lat, site.lon], { icon: myIcon });
             markers.addLayer(marker);
 
-            marker.addTo(map);
         }
+        markers.addTo(map);
     });
 
-
-
-function myIcon(IconUrl) {
-    var infobox = document.getElementById("Infobox");
-    infobox.classList.toggle("show");
-};
-
-
-
-function myIcon() {
-    while (Write = 'Data/sitecluster.json') {
-        var keyboardEvent = document.createEvent('KeyboardEvent');
-        var initMethod = typeof keyboardEvent.initKeyBoardEvent !== 'undefined' ? 'initKeyboardEvent' : 'initKeyEvent';
-        keyboardEvent[initMethod]('keydown', // event type : keydown, keyup, keypress
-            true, // bubbles
-            true, // cancelable
-            window, // viewArg: should be window
-            false, // ctrlKeyArg
-            false, // altKeyArg
-            false, // shiftKeyArg
-            false, // metaKeyArg
-            13, // keyCodeArg : unsigned long the virtual key code, else 0
-            13 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-        );
-        document.getElementById('text').dispatchEvent(keyboardEvent);
-        var infobox = document.getElementById("myInfobox");
-        infobox.classList.toggle("show");
-    }
-}
