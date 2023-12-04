@@ -24,7 +24,7 @@ fetch("../sitecluster.json")
 
             var marker = L.marker([site.lat, site.lon], { icon: myIcon });
 
-            // Use a function to dynamically generate the popup content based on JSON data
+            // importerad information från sitecluster.json
             marker.bindPopup(function () {
                 return `
                     <strong>Latitude :</strong> ${site.lat}<br>
