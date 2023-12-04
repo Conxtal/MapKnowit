@@ -44,11 +44,10 @@
 </div>
 
 
-<button id="button" onclick=""></button>
 
 
 
-<div class="infobox" @* onclick="myIcon(iconUrl = 'imgs/MarkerIcon.jpg')" *@ KeyboardEvent="enter1">
+<div class="infobox"  @* onclick="myIcon(iconUrl = 'imgs/MarkerIcon.jpg')" *@ KeyboardEvent="enter1">
     <div class="infoboxwindow">
         <div class="infoboxBackground">
             <div id="infoboxImage">
@@ -69,10 +68,7 @@
 <div id="map" style="height: 1000px;">
 </div>
 
-<script src="~/js/leaflet.js"></script>
-<script src="~/js/leaflet.markercluster.js"></script>
 
-<script src="js/map.js"></script>
 
 <style>
 
@@ -152,12 +148,7 @@
         cursor: pointer;
     }
 
-    #map {
-        right: 8%;
-        top: 10px;
-        width: 1500px;
-        z-index: 1;
-    }
+   
 
     .infoboxBackground {
         position: absolute;
@@ -215,12 +206,25 @@
         }
 
 
-
-
-
-        .infoboxBackground, #infoboxImage img, #pricePoint, #textPrice, #Information, #Information #nameofPlace {
-            opacity: 0.0;
+        .infobox {
+           opacity: 0.0;
         }
+
+
+
+    #map {
+        right: 8%;
+        top: 10px;
+        width: 1500px;
+        z-index: 1;
+    }
+
+   
+
 </style>
 
 
+<script src="~/js/leaflet.js"></script>
+<script src="~/js/leaflet.markercluster.js"></script>
+
+<script src="js/map.js"></script>
