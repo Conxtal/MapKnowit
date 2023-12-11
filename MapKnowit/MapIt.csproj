@@ -11,6 +11,10 @@
     <Compile Remove="Pages\locations.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\imgs\pexels-photo-1423600.jpeg" />
+  </ItemGroup>
+
 	<ItemGroup>
     <None Include="wwwroot\js\map.js" />
   </ItemGroup>
