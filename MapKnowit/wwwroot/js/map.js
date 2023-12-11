@@ -24,9 +24,10 @@ fetch("../sitecluster.json")
 
             var marker = L.marker([site.lat, site.lon], { icon: myIcon });
 
-            // importerad information från sitecluster.json
-            marker.bindPopup(function () {
-                return `
+            // importerar data för att skapa ett pop up ruta när du har musen över en marker
+            marker.on('mouseover', function () {
+               
+                marker.bindPopup(`
                     <strong>Latitude :</strong> ${site.lat}<br>
                     <strong>Longitude :</strong> ${site.lon}<br>
                     <strong>Address :</strong> ${site.display_name} <br>
@@ -45,8 +46,8 @@ fetch("../sitecluster.json")
                     <strong>County :</strong> ${site.address.county} <br>
                     <strong>ResponseCode :</strong> ${site.ResponseCode} <br>
                     <strong>addresstype :</strong> ${site.addresstype} <br>
-
-                   `;
+                `).openPopup();
+                        
             });
 
             markers.addLayer(marker);
