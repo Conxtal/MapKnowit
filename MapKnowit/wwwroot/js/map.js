@@ -28,26 +28,33 @@ fetch("../sitecluster.json")
             marker.on('mouseover', function () {
                
                 marker.bindPopup(`
-                    <strong>Latitude :</strong> ${site.lat}<br>
-                    <strong>Longitude :</strong> ${site.lon}<br>
-                    <strong>Address :</strong> ${site.display_name} <br>
-                    <strong>Road :</strong> ${site.address.road} <br>
-                    <strong>Village :</strong> ${site.address.village} <br>
-                    <strong>Isolated dwelling :</strong> ${site.address.isolated_dwelling} <br>
-                    <strong>Municipality :</strong> ${site.address.municipality} <br>
-                    <strong>City district :</strong> ${site.address.city_district} <br>
-                    <strong>City :</strong> ${site.address.city} <br>
-                    <strong>State :</strong> ${site.address.state} <br>
-                    <strong>Region :</strong> ${site.address.region} <br>
-                    <strong>Postcode :</strong> ${site.address.postcode} <br>
-                    <strong>Country :</strong> ${site.address.country} <br>
-                    <strong>Country code :</strong> ${site.address.country_code} <br>
-                    <strong>Town :</strong> ${site.address.town} <br>
-                    <strong>County :</strong> ${site.address.county} <br>
-                    <strong>ResponseCode :</strong> ${site.ResponseCode} <br>
-                    <strong>addresstype :</strong> ${site.addresstype} <br>
+                    <strong>Address:</strong> ${site.display_name} <br>
+                    <strong>Road:</strong> ${site.address.road} <br>
+                    <strong>Village:</strong> ${site.address.village} <br>
+                    <strong>City district:</strong> ${site.address.city_district} <br>
+                    <strong>City:</strong> ${site.address.city} <br>
+                    <strong>State:</strong> ${site.address.state} <br>
+                    <strong>Region:</strong> ${site.address.region} <br>
+                    <strong>Country:</strong> ${site.address.country} <br>
+                    <strong>Country code:</strong> ${site.address.country_code} <br>
+                    <strong>Town:</strong> ${site.address.town} <br>
+                    <strong>County:</strong> ${site.address.county} <br>
+                    <strong>addresstype:</strong> ${site.addresstype} <br>
                 `).openPopup();
-                        
+               
+                });
+                 marker.on('click', function () {
+                     var item = document.getElementById('infoboxBackground');
+                     console.log(item);
+                     item.style.visibility = 'visible';
+
+                     map.on('click', function () {
+                         var item = document.getElementById('infoboxBackground');
+                         console.log(item);
+                         item.style.visibility = 'hidden';
+
+                     })
+
             });
 
             markers.addLayer(marker);
@@ -55,3 +62,4 @@ fetch("../sitecluster.json")
 
         markers.addTo(map);
     });
+
