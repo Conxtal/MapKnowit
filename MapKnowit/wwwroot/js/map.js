@@ -42,24 +42,29 @@ fetch("../sitecluster.json")
                     <strong>addresstype:</strong> ${site.addresstype} <br>
                 `).openPopup();
                
+            });
+            marker.on('click', function (site) {
+                var item = document.getElementById('infoboxBackground');
+                console.log(item);
+                item.style.visibility = 'visible';
+                document.getElementById('latitude').innerHTML  = site.lat
+ 
+                       
+                map.on('click', function (site) {
+                    var item = document.getElementById('infoboxBackground');
+                    console.log(item);
+                    item.style.visibility = 'hidden'
+                   
+
                 });
-                 marker.on('click', function () {
-                     var item = document.getElementById('infoboxBackground');
-                     console.log(item);
-                     item.style.visibility = 'visible';
-
-                     map.on('click', function () {
-                         var item = document.getElementById('infoboxBackground');
-                         console.log(item);
-                         item.style.visibility = 'hidden';
-
-                     })
-
+                
+                
             });
 
             markers.addLayer(marker);
         });
 
         markers.addTo(map);
+        
     });
 
