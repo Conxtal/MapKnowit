@@ -67,13 +67,32 @@
     <div class="filterboxWindow">
         <form class="filterSearchbox">
             <input type="text" placeholder="Search.." name="search">
-            <button type="submit" class="filterSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
+            <button type="submit" class="filterSubmit" style="border-radius: 50%;"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
+        </form>
+
+        <form class="searchCountry">
+            <input type="text" placeholder="Country:" name="Country">
+            <button type="submit" class="countrySubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
+        </form>
+
+        <form class="searchCity">
+            <input type="text" placeholder="City:" name="City">
+            <button type="submit" class="citySubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
         </form>
 
         <form class="searchLong">
-            <input type="text" placeholder="Latitude:" name="search">
+            <input type="text" placeholder="Longitude:" name="Long">
             <button type="submit" class="longSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
         </form>
+
+        <form class="searchLat">
+            <input type="text" placeholder="Latitude:" name="Lat">
+            <button type="submit" class="latSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
+        </form>
+
+        <div class="filterboxDivider"></div>
+
+
     </div>
 </div>
 
@@ -85,150 +104,150 @@
 <style>
 
     body {
-        background-color: black;
+    background-color: black;
     }
 
 
     .center h1.display-4 {
-        color: black;
-        text-align: center
+    color: black;
+    text-align: center
     }
 
     .dropdown-header h1.display-4 {
-        text-align: center;
+    text-align: center;
     }
 
     .Button {
-        position: absolute;
-        top: 250px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 25px;
-        border: 2px solid white;
-        padding: 5px;
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 5px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center
     }
 
     .Search input {
-        text-align: center;
-        color: black;
-        background: white;
-        border: 1px solid black;
-        border-radius: 25px;
-        padding: 10px;
-        width: 285px;
-        box-sizing: border-box;
+    text-align: center;
+    color: black;
+    background: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    width: 285px;
+    box-sizing: border-box;
     }
 
     .panel-container {
-        position: absolute;
-        top: 0;
-        left: -450px;
-        width: 450px;
-        height: 100%;
-        background-color: white;
-        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
-        transition: left 0.5s ease-in-out;
-        z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: -450px;
+    width: 450px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
     }
 
-        .panel-container.visible {
-            opacity: 1;
-        }
+    .panel-container.visible {
+    opacity: 1;
+    }
 
     .panel-header {
-        height: 50px;
-        padding: 10px;
-        background-color: transparent;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
+    height: 50px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     }
 
     .panel-content {
-        padding: 10px;
+     padding: 10px;
     }
 
     .close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
     }
 
    
 
     .infoboxBackground {
-        position: absolute;
-        height: 600px;
-        width: 400px;
-        max-width: 400px;
-        top: 25%;
-        right: 35px;
-        padding: 10px;
-        border-radius: 15px;
-        background-color: #f5f5f5;
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    max-width: 400px;
+    top: 25%;
+    right: 35px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
     }
 
     #infoboxImage img {
-        position: absolute;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        height: auto;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     }
 
     #pricePoint {
-        position: absolute;
-        height: 35px;
-        width: 100px;
-        bottom: -50px;
-        right: 15px;
-        border: 1px solid white;
-        border-radius: 15px;
-        background-color: #f5f5f5;
+    position: absolute;
+    height: 35px;
+    width: 100px;
+    bottom: -50px;
+    right: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #f5f5f5;
     }
 
     #textPrice {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 18px;
-        font: 800;
-        position: absolute;
-        left: 29px;
-        top: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font: 800;
+    position: absolute;
+    left: 29px;
+    top: 2px;
     }
 
     #Information {
-        font-family: Arial;
+    font-family: Arial;
     }
 
-        #Information #nameofPlace {
-            color: black;
-            font-size: 22px;
-            font-weight: 600;
-            position: absolute;
-            bottom: 35%;
-            left: 30px;
-        }
+    #Information #nameofPlace {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 35%;
+    left: 30px;
+    }
 
 
-        .infobox {
-           opacity: 0.0;
-        }
+    .infobox {
+    opacity: 0.0;
+    }
 
 
 
     #map {
-        right: 8%;
-        top: 10px;
-        width: 1500px;
-        z-index: 1;
+    right: 8%;
+    top: 10px;
+    width: 1500px;
+    z-index: 1;
     }
 
     .leaflet-popup-content-wrapper {
@@ -240,55 +259,122 @@
     }
 
     .filterboxWindow{
-        position: absolute;
-        height: 60%;
-        width: 200px;
-        max-width: 400px;
-        top: 25%;
-        left: 0;
-        padding: 10px;
-        border-radius: 15px;
-        background-color: #f5f5f5;
+    position: absolute;
+    height: 60%;
+    width: 200px;
+    max-width: 400px;
+    top: 25%;
+    left: 0;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
     }
 
 
     form.filterSearchbox input[type=text]{
-        position: absolute;
-        top: 15px;
-        width: 90%;
-        height: 35px;
-        border: 1px solid black;
-        border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    width: 90%;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
     }
 
     
-        form.filterSubmit button{
-        position: absolute;
-        border-radius: 50%;
-        height: 250px;
-        width: 250px;
+    form.filterSubmit button{
+    position: absolute;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    }
+
+    .filterSubmit img{
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 20px;
+    top: 20px;
+    right: 15px;
+    }
+
+    form.searchCountry input[type=text]{
+    position: absolute;
+    width: 90%;
+    top: 60px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    }
+
+    .countrySubmit img{
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 20px;
+    top: 65px;
+    right: 15px;
+    }
+
+    form.searchCity input[type=text]{
+    position: absolute;
+    width: 90%;
+    top: 107px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    }
+
+    .citySubmit img{
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 20px;
+    top: 112px;
+    right: 15px;
     }
 
     form.searchLong input[type=text]{
-        position: absolute;
-        width: 90%;
-        height: 35px;
-        border-radius: 5px;
-        border: 1px solid black;
-        top: 75px;
+    position: absolute;
+    width: 90%;
+    top: 153px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
     }
 
-    form.searchLong img{
-        position: absolute;
-        top: 85px;
-        right: 35px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
+    .longSubmit img {
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 20px;
+    top: 158px;
+    right: 15px;
     }
 
+    form.searchLat input[type=text]{
+    position: absolute;
+    width: 90%;
+    top: 200px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    }
 
+    .latSubmit img{
+    position: absolute;
+    border-radius: 50%;
+    height: 25px;
+    width: 20px;
+    top: 205px;
+    right: 15px;
+    }
 
+    .filterboxDivider {
+    position: absolute;
+    width: 90%;
+    top: 280px;
+    border-bottom: 1px solid black;
+    }
 
 
 
