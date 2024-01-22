@@ -43,21 +43,39 @@ fetch("../sitecluster.json")
                 `).openPopup();
                
             });
-            marker.on('click', function (site) {
+            marker.on('click', function () {
                 var item = document.getElementById('infoboxBackground');
                 console.log(item);
                 item.style.visibility = 'visible';
-                document.getElementById('latitude').innerHTML  = site.lat
- 
-                       
-                map.on('click', function (site) {
+                document.getElementById('latitude').innerHTML = (`<strong>Latitude:</strong> ${site.lat}`)
+                document.getElementById('longitude').innerHTML = (`<strong>Longitude:</strong> ${site.lon}`)
+                document.getElementById('display_name').innerHTML = (`<strong>Address:</strong> ${site.display_name}`)
+                document.getElementById('road').innerHTML = (`<strong>Road:</strong> ${site.address.road}`)
+                document.getElementById('village').innerHTML = (`<strong>Village:</strong> ${site.address.village}`)
+                document.getElementById('isolated_dwelling').innerHTML = (`<strong>Isolated dwelling:</strong> ${site.address.isolated_dwelling}`)
+                document.getElementById('municipality').innerHTML = (`<strong>Municipality:</strong> ${site.address.municipality}`)
+                document.getElementById('city_district').innerHTML = (`<strong>City district:</strong> ${site.address.city_district}`)
+                document.getElementById('city').innerHTML = (`<strong>City:</strong> ${site.address.city}`)
+                document.getElementById('state').innerHTML = (`<strong>State:</strong> ${site.address.state}`)
+                document.getElementById('ISO3166-2-lvl4').innerHTML = (`<strong>ISO3166 2 lvl4:</strong> ${site.address.ISO3166 - 2 - lvl4}`)
+                document.getElementById('region').innerHTML = (`<strong>Region:</strong> ${site.address.region}`)
+                document.getElementById('ISO3166-2-lvl3').innerHTML = (`<strong>ISO3166 2 lvl3:</strong> ${site.address.ISO3166 - 2 - lvl3}`)
+                document.getElementById('postcode').innerHTML = (`<strong>Postcode:</strong> ${site.address.postcode}`)
+                document.getElementById('country').innerHTML = (`<strong>Country:</strong> ${site.address.country}`)
+                document.getElementById('country_code').innerHTML = (`<strong>Country code:</strong> ${site.address.country_code}`)
+                document.getElementById('town').innerHTML = (`<strong>Town:</strong> ${site.address.town}`)
+                document.getElementById('county').innerHTML = (`<strong>County:</strong> ${site.address.county}`)
+                document.getElementById('ResponseCode').innerHTML = (`<strong>Response Code:</strong> ${site.ResponseCode}`)
+                document.getElementById('addresstype').innerHTML = (`<strong>Address type:</strong> ${site.addresstype}`)
+                
+                map.on('click', function () {
                     var item = document.getElementById('infoboxBackground');
                     console.log(item);
                     item.style.visibility = 'hidden'
-                   
 
+                   
                 });
-                
+              
                 
             });
 
