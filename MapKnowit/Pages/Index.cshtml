@@ -90,6 +90,25 @@
             <button type="submit" class="latSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
         </form>
 
+        <p class="FilterLine"> Filters on this page </p>
+
+        <div class="dropdownDisplay">
+            <button class="dropdownBtn"> Division </button>
+                <div class="dropdownContent">
+                    <a href="#"> Link 1</a>
+                    <a href="#"> Link 2</a>
+                    <a href="#"> Link 3</a>
+            </div>
+        </div>
+
+        <div class="filteringDisplay">
+            <button class="filteringButton"> Filtering type </button>
+            <div class="filteringdisplayContent">
+                <a href="#"> Basic Filtering</a>
+                <a href="#"> Advanced Filtering</a>
+            </div>
+        </div>
+
         <div class="filterboxDivider"></div>
 
 
@@ -376,11 +395,86 @@
     border-bottom: 1px solid black;
     }
 
+    .FilterLine{
+    position: absolute;
+    top: 250px;
+    }
 
+    .dropdownBtn{
+    background-color: white;
+    color: white;
+    height: 28px;
+    width: 150px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    }
 
+    .dropdownDisplay{
+    position: absolute;
+    top: 300px;
+    right: 27px;
+    display: inline-block;
+    }
+
+    .dropdownContent{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    .dropdownContent a{
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    }
+
+    .dropdownContent a:hover{background-color: #ddd;}
+    .dropdownDisplay:hover .dropdownContent {display: block;}
+    .dropdownDisplay:hover .dropdownBtn {background-color: #3e8e41;}
+
+    .filteringButton{
+    background-color: white;
+    color: white;
+    height: 28px;
+    width: 150px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    }
+
+    .filteringDisplay{
+    position: absolute;
+    top: 350px;
+    right: 27px;
+    display: inline-block;
+    }
+
+    .filteringdisplayContent{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    .filteringdisplayContent a{
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    }
+
+    .filteringdisplayContent a:hover{background-color: #ddd;}
+    .filteringDisplay:hover .filteringdisplayContent {display: block;}
+    .filteringDisplay:hover .filteringButton {background-color: #3e8e41;}
 
 </style>
-
 
 <script src="~/js/leaflet.js"></script>
 <script src="~/js/leaflet.markercluster.js"></script>
