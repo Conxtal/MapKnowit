@@ -57,9 +57,9 @@ fetch("../sitecluster.json")
                 document.getElementById('city_district').innerHTML = (`<strong>City district:</strong> ${site.address.city_district}`)
                 document.getElementById('city').innerHTML = (`<strong>City:</strong> ${site.address.city}`)
                 document.getElementById('state').innerHTML = (`<strong>State:</strong> ${site.address.state}`)
-                document.getElementById('ISO3166-2-lvl4').innerHTML = (`<strong>ISO3166 2 lvl4:</strong> ${site.address.ISO3166 - 2 - lvl4}`)
+                document.getElementById('ISO3166-2-lvl4').innerHTML = (`<strong>ISO3166 2 lvl4:</strong> ${site.address.lvl4}`)
                 document.getElementById('region').innerHTML = (`<strong>Region:</strong> ${site.address.region}`)
-                document.getElementById('ISO3166-2-lvl3').innerHTML = (`<strong>ISO3166 2 lvl3:</strong> ${site.address.ISO3166 - 2 - lvl3}`)
+                document.getElementById('ISO3166-2-lvl3').innerHTML = (`<strong>ISO3166 2 lvl3:</strong> ${site.address.lvl3}`)
                 document.getElementById('postcode').innerHTML = (`<strong>Postcode:</strong> ${site.address.postcode}`)
                 document.getElementById('country').innerHTML = (`<strong>Country:</strong> ${site.address.country}`)
                 document.getElementById('country_code').innerHTML = (`<strong>Country code:</strong> ${site.address.country_code}`)
@@ -78,6 +78,7 @@ fetch("../sitecluster.json")
               
                 
             });
+
 
             markers.addLayer(marker);
         });
