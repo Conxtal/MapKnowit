@@ -79,6 +79,7 @@ fetch("../sitecluster.json")
                 
             });
 
+
             markers.addLayer(marker);
         });
 
