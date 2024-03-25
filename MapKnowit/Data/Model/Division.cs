@@ -1,4 +1,4 @@
-﻿namespace MapIt.Data.Model
+﻿ namespace MapIt.Data.Model
 {
     public class Division
     {

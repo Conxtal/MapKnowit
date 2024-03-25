@@ -104,6 +104,10 @@
     <div id="ResponseCode">
     </div>
 
+    <div id="addresstype">
+
+    </div>
+
 </div>
 
 <div class="filterBox">
@@ -125,7 +129,7 @@
 
         <form class="searchLong">
             <input type="text" placeholder="Longitude:" name="Long">
-            <button type="submit" class="longSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon" /></button>
+            <button type="submit" class="longSubmit"><img src="~/imgs/SearchIcon.png" alt="Search Icon"  id="image"/></button>
         </form>
 
         <form class="searchLat">
@@ -417,6 +421,7 @@
     width: 20px;
     top: 158px;
     right: 15px;
+    visibility: hidden;
     }
 
     form.searchLat input[type=text]{
@@ -522,6 +527,10 @@
     .filteringdisplayContent a:hover{background-color: #ddd;}
     .filteringDisplay:hover .filteringdisplayContent {display: block;}
     .filteringDisplay:hover .filteringButton {background-color: #3e8e41;}
+
+    #image{
+        visibility: visible;
+    }
 
 </style>
 
