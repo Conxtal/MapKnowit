@@ -4,14 +4,16 @@
     {
         public int SiteID { get; set; }
 
-        public string siteName { get; set; }
+        public string? SiteName { get; set; }
 
-        public string latitude { get; set; }
+        public float Latitude { get; set; }
 
-        public string longitude { get; set; }
+        public float Longitude { get; set; }
 
-        public string Area { get; set; }
+        public string? Area { get; set; }
 
-        public string Rent { get; set; }
+        public string? Country { get; set; }
+        
+        public float? Rent { get; set; }
     }
 }

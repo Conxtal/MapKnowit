@@ -10,7 +10,7 @@
         //}
 
         public int DivisionID { get; set; }
-        public string DivisionName { get; set; }
+        public bool DivisionName { get; set; }
     }
 
     

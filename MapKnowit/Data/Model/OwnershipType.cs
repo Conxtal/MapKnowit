@@ -4,6 +4,6 @@
     {
         public int OwnershipTypeID { get; set; }
 
-        public string OwnershipType { get; set;}
+        public bool Ownership { get; set;}
     }
 }

@@ -15,7 +15,7 @@ namespace MapIt.Data.Context
         }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Division> Divisions { get; set; }
-        public DbSet<Activity> Activities { get; set; }
+        public DbSet<Model.Activity> Activities { get; set; }
         public DbSet<Site> Sites { get; set; }
         public DbSet<OwnershipType> OwnershipTypes { get; set; }
         public DbSet<CompanySiteRelation> CompanySites { get; set; }    

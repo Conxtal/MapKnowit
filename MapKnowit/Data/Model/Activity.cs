@@ -4,6 +4,6 @@
     {
         public int ActivityID { get; set; }
 
-        public string Activity { get; set; }
+        public string? ActivityType { get; set; }
     }
 }

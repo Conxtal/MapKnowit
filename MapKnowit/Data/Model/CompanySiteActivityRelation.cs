@@ -1,9 +1,12 @@
-﻿namespace MapIt.Data.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MapIt.Data.Model
 {
     public class CompanySiteActivityRelation
     {
-        public int CompanySiteID { get; set; }
+        [Key]
+        public int CompanySiteID { get; set; } 
 
-        public string ActivityID { get; set; }
+        public int ActivityID { get; set; } 
     }
 }

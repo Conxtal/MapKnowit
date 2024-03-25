@@ -10,7 +10,7 @@
         //}
 
         public int CompanyID { get; set; }
-        public string CompanyName { get; set;}
+        public bool CompanyName { get; set;}
 
         public int DivisionID { get; set;}
     }
